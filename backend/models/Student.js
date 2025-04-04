@@ -57,6 +57,10 @@ const StudentSchema = new Schema({
         type:Schema.Types.ObjectId,
         ref:'user'
     },
+    EventFund:{
+        type:Schema.Types.ObjectId,
+        ref:'EventFund'
+    },
     hostel:{
         type:Schema.Types.ObjectId,
         ref:'hostel'

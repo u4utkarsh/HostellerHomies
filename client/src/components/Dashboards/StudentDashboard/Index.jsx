@@ -86,6 +86,27 @@ export default function Index() {
       ),
     },
     {
+      text: "Event Request",
+      url: "/student-dashboard/event",
+      svg: (
+        <svg
+          className="h-6 w-6"
+          viewBox="0 0 24 24"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          stroke="currentColor"
+          strokeWidth={1.5}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        >
+          {" "}
+          <circle cx="12" cy="12" r="10" />{" "}
+          <path d="M12 8v4l2 2" />{" "}
+          <path d="M9 16h6" />
+        </svg>
+      ),
+},
+    {
       text: "Complaints",
       url: "/student-dashboard/complaints",
       svg: (

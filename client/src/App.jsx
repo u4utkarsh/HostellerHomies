@@ -27,6 +27,7 @@ import AdminSettings from './components/Dashboards/AdminDashboard/Settings'
 import AllStudents from "./components/Dashboards/AdminDashboard/AllStudents";
 import AdminMess from "./components/Dashboards/AdminDashboard/MessOff";
 import RulesAndGuidelines from "./components/LandingSite/rulesAndGuidelines/RulesAndGuidelines";
+import Event from "./components/Dashboards/StudentDashboard/Event";
 
 function App() {
   return (
@@ -52,6 +53,7 @@ function App() {
           <Route path="suggestions" element={<Suggestions/>} />
           <Route path="invoices" element={<Invoices/>} />
           <Route path="settings" element={<Settings/>} />
+          <Route path="event" element={<Event />} />
         </Route>
         <Route path="/admin-dashboard" element={<AdminIndex />}>
           <Route index element={<AdminHome />} />
