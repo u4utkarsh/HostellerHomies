@@ -39,8 +39,11 @@ exports.EventFundRegister = async (req, res) => {
 };
 exports.getEventFundBtStudentId = async (req, res) => {
     try {
+        console.log("i am here")
         const {studentId}=req.body;
+        console.log(studentId);
         const EventFundDetailsOfStudent = await EventFund.find({ student: studentId });
+        console.log(EventFundDetailsOfStudent)
         if(!EventFundDetailsOfStudent)
         {
             res.status(400).json({ success: false, msg: 'No Events are found!' });
@@ -59,5 +62,23 @@ exports.getEventFund = async (req, res) => {
     } catch (err) {
         console.error("Error in getEventFund:", err.message);
         res.status(500).json({ success: false, msg: 'Error fetching EventFund data' });
+    }
+};
+exports.updateEventFundStatus = async (req, res) => {
+    try {
+        const { eventFundId, status } = req.body;
+        if (!eventFundId || !status) {
+            return res.status(400).json({ message: "EventFund ID and status are required" });
+        }
+        const updatedEventFund = await EventFund.findByIdAndUpdate(
+            eventFundId,
+            { status },
+            { new: true } 
+        );
+        if (!updatedEventFund) {
+            return res.status(404).json({ message: "EventFund not found" });
+        }        res.status(200).json({ message: "Status updated successfully", eventFund: updatedEventFund });
+    } catch (error) {
+        res.status(500).json({ message: "Internal Server Error", error: error.message });
     }
 };

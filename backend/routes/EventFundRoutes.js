@@ -1,7 +1,8 @@
 const express = require('express');
 const router = express.Router();
-const { EventFundRegister ,getEventFund,getEventFundBtStudentId} = require('../controllers/EventFundController.js');
+const { EventFundRegister ,getEventFund,getEventFundBtStudentId,updateEventFundStatus} = require('../controllers/EventFundController.js');
 router.post('/EventFund',EventFundRegister);
 router.get('/EventFund/get', getEventFund);
-router.get("/EventFund/student/get",getEventFundBtStudentId);
+router.post("/EventFund/student/get",getEventFundBtStudentId);
+router.post("/EventFund/admin/update",updateEventFundStatus);
 module.exports = router;
