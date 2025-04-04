@@ -4,6 +4,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import LoadingBar from 'react-top-loading-bar'
 
 function Invoices() {
+  
   const genInvoices = async () => {
     setProgress(30)
     let hostel = JSON.parse(localStorage.getItem("hostel"));

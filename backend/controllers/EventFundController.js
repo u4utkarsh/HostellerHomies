@@ -37,6 +37,20 @@ exports.EventFundRegister = async (req, res) => {
         res.status(500).json({ success: false, msg: 'Server error while registering EventFund' });
     }
 };
+exports.getEventFundBtStudentId = async (req, res) => {
+    try {
+        const {studentId}=req.body;
+        const EventFundDetailsOfStudent = await EventFund.find({ student: studentId });
+        if(!EventFundDetailsOfStudent)
+        {
+            res.status(400).json({ success: false, msg: 'No Events are found!' });
+        }
+        res.status(200).json({ success: true,eventDetails:EventFundDetailsOfStudent });
+    } catch (err) {
+        console.error("Error in getEventFund:", err.message);
+        res.status(500).json({ success: false, msg: 'Error fetching EventFund data' });
+    }
+};
 
 exports.getEventFund = async (req, res) => {
     try {
