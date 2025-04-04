@@ -6,7 +6,7 @@ export default function RequestAcc() {
   const register = (event) => {
     event.preventDefault();
     let data = {
-      cms_id: inputCms,
+      urn: inputurn,
     };
 
     fetch("http://localhost:3000/api/request/register", {
@@ -27,18 +27,18 @@ export default function RequestAcc() {
     }
     );
   };
-  const [inputCms, setInputCms] = useState('');
-  const changeCms = (event) => {
-    setInputCms(event.target.value);
+  const [inputurn, setInputurn] = useState('');
+  const changeurn = (event) => {
+    setInputurn(event.target.value);
   }
 
 
-  const cms = {
-    name: "cms",
+  const urn = {
+    name: "urn",
     type: "number",
     placeholder: "000000",
     req: true,
-    onChange: changeCms,
+    onChange: changeurn,
   }
 
   return (
@@ -48,7 +48,7 @@ export default function RequestAcc() {
           Request account from Hostel Manager
         </h1>
         <form className="space-y-4 md:space-y-6" onSubmit={register}>
-          <Input field={cms} />
+          <Input field={urn} />
           <button
             type="submit"
             className="w-full text-white hover:bg-blue-700 focus:ring-4 focus:outline-none font-medium rounded-lg text-sm px-5 py-2.5 text-center bg-blue-600 focus:ring-blue-800"

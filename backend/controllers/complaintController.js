@@ -1,6 +1,7 @@
 const { validationResult } = require('express-validator');
 const { Complaint } = require('../models');
 
+
 // @route   Register api/compalint
 // @desc    Register complaint
 // @access  Public

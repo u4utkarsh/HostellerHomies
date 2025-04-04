@@ -17,7 +17,7 @@ router.post('/register', [
 // @route   GET api/complaint/hostel
 // @desc    Get all complaints by hostel id
 // @access  Public
-router.post('/hostel/', [
+router.post('/hostel', [
     check('hostel', 'Hostel is required').not().isEmpty()
 ], getbyhostel);
 
