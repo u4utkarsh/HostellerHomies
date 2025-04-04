@@ -4,5 +4,5 @@ const { EventFundRegister ,getEventFund,getEventFundBtStudentId,updateEventFundS
 router.post('/EventFund',EventFundRegister);
 router.get('/EventFund/get', getEventFund);
 router.post("/EventFund/student/get",getEventFundBtStudentId);
-router.post("/EventFund/admin/update",updateEventFundStatus);
+router.put("/EventFund/admin/update",updateEventFundStatus);
 module.exports = router;
