@@ -28,6 +28,7 @@ import AllStudents from "./components/Dashboards/AdminDashboard/AllStudents";
 import AdminMess from "./components/Dashboards/AdminDashboard/MessOff";
 import RulesAndGuidelines from "./components/LandingSite/rulesAndGuidelines/RulesAndGuidelines";
 import Event from "./components/Dashboards/StudentDashboard/Event";
+import EventRequestVerification from "./components/Dashboards/AdminDashboard/EventRequestVerification";
 
 function App() {
   return (
@@ -65,6 +66,8 @@ function App() {
           <Route path="settings" element={<AdminSettings/>} />
           <Route path="all-students" element={<AllStudents/>}/>
           <Route path="mess" element={<AdminMess />} />
+          <Route path="event-request-verification" element={<EventRequestVerification />} />
+
         </Route>
       </Routes>
     </>

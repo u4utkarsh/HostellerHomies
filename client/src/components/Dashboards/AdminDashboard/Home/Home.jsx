@@ -16,6 +16,9 @@ import { toast } from "react-toastify";
 function Home() {
   const admin = JSON.parse(localStorage.getItem("admin"));
   const hostel = JSON.parse(localStorage.getItem("hostel"));
+
+  // const admin = JSON.parse(localStorage.getItem("admin")) || {};
+  // const hostel = JSON.parse(localStorage.getItem("hostel")) || {};
   const [noOfStudents, setNoOfStudents] = useState(0);
   const [complaints, setComplaints] = useState([]);
   const [suggestions, setSuggestions] = useState([]);

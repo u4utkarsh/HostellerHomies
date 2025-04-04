@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import EventStatus from './EventStatus';
 
 const Event = () => {
   const [formData, setFormData] = useState({
@@ -79,15 +80,14 @@ const Event = () => {
           </div>
 
           <div>
-            <label className="block text-gray-300 font-semibold mb-1">Event Details</label>
-            <textarea
+            <label className="block text-gray-300 font-semibold mb-1">Event Name</label>
+            <input
               name="eventDetails"
-              rows="3"
               className="w-full px-3 py-2 border border-gray-600 bg-transparent text-white rounded-md resize-none focus:outline-none focus:ring-2 focus:ring-blue-500"
               value={formData.eventDetails}
               onChange={handleChange}
               required
-            ></textarea>
+            ></input>
           </div>
 
           <div>
@@ -111,7 +111,9 @@ const Event = () => {
             </button>
           </div>
         </form>
-        
+        <div className="flex justify-center items-center h-screen bg-gray-100">
+      <EventStatus requestId="12345" />
+    </div>
       </div>
     </div>
   );
