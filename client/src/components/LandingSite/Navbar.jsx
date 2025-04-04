@@ -55,6 +55,12 @@ function Navbar() {
           Rules & Guidelines
         </Link>
         <Link
+          to="/notices"
+          className="md:py-3 md:hover:text-blue-500 transition-all ease-linear"
+        >
+          NoticeBoard
+        </Link>
+        <Link
           to="/auth/admin-login"
           className="md:py-3 md:hover:text-blue-500 transition-all ease-linear"
         >

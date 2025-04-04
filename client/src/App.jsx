@@ -27,7 +27,10 @@ import AdminSettings from './components/Dashboards/AdminDashboard/Settings'
 import AllStudents from "./components/Dashboards/AdminDashboard/AllStudents";
 import AdminMess from "./components/Dashboards/AdminDashboard/MessOff";
 import RulesAndGuidelines from "./components/LandingSite/rulesAndGuidelines/RulesAndGuidelines";
+
+import NoticeBoard from "./components/LandingSite/NoticeBoard/NoticeBoard";
 import Event from "./components/Dashboards/StudentDashboard/Event";
+
 
 function App() {
   return (
@@ -38,6 +41,7 @@ function App() {
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
           <Route path="rules" element={<RulesAndGuidelines />} />
+          <Route path="notices" element={<NoticeBoard />} />
           <Route path="auth" element={<Auth />}>
             <Route index element={<SignIn />} />
             <Route path="login" element={<SignIn />} />
