@@ -39,10 +39,8 @@ const EventStatus = ({ currentStatus }) => {
     return visibleSteps.map((step, index) => {
       const StepIcon = statusSteps.find((s) => s.name === step)?.icon;
       return (
-        <div key={step} className="flex items-center">
-          {StepIcon && (
-            <StepIcon className={`h-6 w-6 ${getStatusClass(step)}`} />
-          )}
+        <div key={step} className="flex items-center border-b pb-2">
+          {StepIcon && <StepIcon className={`h-6 w-6 ${getStatusClass(step)}`} />}
           <span className={`ml-2 text-sm font-medium ${getStatusClass(step)}`}>
             {step}
           </span>
@@ -60,20 +58,19 @@ const EventStatus = ({ currentStatus }) => {
 
       {/* Event Details */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6 text-sm">
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 border p-3 rounded-lg">
           <p><strong>Event Details:</strong> {currentStatus.eventDetails}</p>
           <p><strong>Fund Required:</strong> ₹{currentStatus.fundRequired}</p>
         </div>
-        <div>
+        <div className="border p-3 rounded-lg">
           <p><strong>Status:</strong> {current}</p>
         </div>
       </div>
 
       {/* Progress Steps */}
-      
-      <div className="flex items-center justify-center mt-4 gap-4">
-      <h3 className="text-lg font-semibold mb-2">Progress</h3>
-        {renderSteps()}
+      <div className="flex flex-col items-center justify-center mt-4 gap-2">
+        <h3 className="text-lg font-semibold mb-2">Progress</h3>
+        <div className="flex gap-4">{renderSteps()}</div>
       </div>
     </div>
   );
