@@ -8,11 +8,9 @@ import { Loader } from "../../Dashboards/Common/Loader";
 
 export default function SignIn() {
   let navigate = useNavigate();
-
   if (localStorage.getItem("token")) {
     verifysession();
   }
-
   let login = async (event) => {
     event.preventDefault();
     setLoader(true);
