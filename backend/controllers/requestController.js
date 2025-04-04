@@ -7,13 +7,13 @@ const register = async (req, res) => {
         return res.status(400).json({ errors: errors.array() })
     }
     try {
-        const { cms_id } = req.body;
-        const request = await Request.findOne({ cms_id });
+        const { urn } = req.body;
+        const request = await Request.findOne({ urn });
         if(request) {
             return res.status(400).json({ errors: [{ msg: 'Request already exists' }] });
         }
         const newRequest = new Request({
-            cms_id
+            urn
         });
         await newRequest.save();
         res.json(newRequest);

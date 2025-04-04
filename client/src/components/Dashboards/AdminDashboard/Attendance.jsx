@@ -24,7 +24,7 @@ function Attendance() {
     const markedStudents = markedData.attendance.map((student) => {
       return {
         id: student.student._id,
-        cms: student.student.cms_id,
+        urn: student.student.urn,
         name: student.student.name,
         room: student.student.room_no,
         attendance: student.status === "present" ? true : false,
@@ -41,7 +41,7 @@ function Attendance() {
     setProgress(90);
     unmarkedStudents.map((student) => {
       student.id = student._id;
-      student.cms = student.cms_id;
+      student.urn = student.urn;
       student.name = student.name;
       student.room = student.room_no;
       student.attendance = undefined;
@@ -194,7 +194,7 @@ function Attendance() {
                             {student.name}
                           </p>
                           <p className="text-sm truncate text-gray-400">
-                            {student.cms} | Room: {student.room}
+                            {student.urn} | Room: {student.room}
                           </p>
                         </div>
                         <button

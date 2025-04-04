@@ -137,7 +137,7 @@ function AllStudents() {
                     {student.name}
                   </p>
                   <p className="text-sm truncate text-gray-400">
-                    {student.cms_id} | Room: {student.room_no}
+                    {student.urn} | Room: {student.room_no}
                   </p>
                 </div>
                 <div className="flex gap-3">

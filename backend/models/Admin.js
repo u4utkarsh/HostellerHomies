@@ -27,7 +27,7 @@ const AdminSchema = new Schema({
         type:Date,
         required:true
     },
-    cnic:{
+    uidai:{
         type:String,
         required:true,
         unique:true

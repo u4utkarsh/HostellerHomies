@@ -71,7 +71,7 @@ const getHostelAttendance = async (req, res) => {
     try {
         const date = new Date();
         const students = await Student.find({ hostel });
-        const attendance = await Attendance.find({ student: { $in: students }, date: { $gte: date.setHours(0, 0, 0, 0), $lt: date.setHours(23, 59, 59, 999) } }).populate('student', ['_id','name', 'room_no', 'cms_id']);
+        const attendance = await Attendance.find({ student: { $in: students }, date: { $gte: date.setHours(0, 0, 0, 0), $lt: date.setHours(23, 59, 59, 999) } }).populate('student', ['_id','name', 'room_no', 'urn']);
         success = true;
         res.status(200).json({ success, attendance });
     }

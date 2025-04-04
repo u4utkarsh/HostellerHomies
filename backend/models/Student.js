@@ -6,7 +6,7 @@ const StudentSchema = new Schema({
         type:String,
         required:true
     },
-    cms_id:{
+    urn:{
         type:Number,
         required:true,
         unique:true
@@ -48,7 +48,7 @@ const StudentSchema = new Schema({
         type:Date,
         required:true
     },
-    cnic:{
+    uidai:{
         type:String,
         required:true,
         unique:true

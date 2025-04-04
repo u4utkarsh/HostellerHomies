@@ -11,7 +11,7 @@ const registerAdmin = async (req, res) => {
             return res.status(400).json({success, errors: errors.array()});
         }
 
-        const {name, email, father_name, contact, address, dob, cnic, hostel, password} = req.body;
+        const {name, email, father_name, contact, address, dob, uidai, hostel, password} = req.body;
 
         try {
             let admin = await Admin.findOne({email});
@@ -40,7 +40,7 @@ const registerAdmin = async (req, res) => {
                 contact,
                 address,
                 dob,
-                cnic,
+                uidai,
                 user: user.id,
                 hostel: shostel.id
             });
@@ -68,7 +68,7 @@ const updateAdmin = async (req, res) => {
             return res.status(400).json({success, errors: errors.array()});
         }
 
-        const {name, email, father_name, contact, address, dob, cnic} = req.body;
+        const {name, email, father_name, contact, address, dob, uidai} = req.body;
 
         try {
             let admin = await Admin.findOne({email});
@@ -83,7 +83,7 @@ const updateAdmin = async (req, res) => {
             admin.contact = contact;
             admin.address = address;
             admin.dob = dob;
-            admin.cnic = cnic;
+            admin.uidai = uidai;
 
             await admin.save();
 

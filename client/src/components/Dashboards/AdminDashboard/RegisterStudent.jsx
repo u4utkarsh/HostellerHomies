@@ -12,7 +12,7 @@ function RegisterStudent() {
       setLoading(true);
       let student = {
         name: name,
-        cms_id: cms,
+        urn: urn,
         room_no: room_no,
         batch: batch,
         dept: dept,
@@ -22,10 +22,11 @@ function RegisterStudent() {
         contact: contact,
         address: address,
         dob: dob,
-        cnic: cnic,
+        uidai: uidai,
         hostel: hostel,
         password: password
       };
+      console.log(student);
       const res = await fetch("http://localhost:3000/api/student/register-student", {
         method: "POST",
         headers: {
@@ -34,7 +35,6 @@ function RegisterStudent() {
         body: JSON.stringify(student),
       })
       const data = await res.json();
-
       if (data.success) {
         toast.success(
           'Student ' + data.student.name + ' Registered Successfully!', {
@@ -47,7 +47,7 @@ function RegisterStudent() {
           progress: undefined,
           theme: "dark",
         })
-        setCms("");
+        seturn("");
         setName("");
         setRoomNo("");
         setBatch("");
@@ -58,11 +58,11 @@ function RegisterStudent() {
         setContact("");
         setAddress("");
         setDob("");
-        setCnic("");
+        setuidai("");
         setPassword("");
         setLoading(false);
       } else {
-        // console.log(cms);
+       
         data.errors.forEach((err) => {
           toast.error(
             err.msg, {
@@ -90,8 +90,9 @@ function RegisterStudent() {
     }
   };
 
-  const hostel = JSON.parse(localStorage.getItem("hostel")).name;
-  const [cms, setCms] = useState();
+  // const hostel = JSON.parse(localStorage.getItem("hostel")).name;
+  const hostel="Hostel No 1";
+  const [urn, seturn] = useState();
   const [name, setName] = useState();
   const [room_no, setRoomNo] = useState();
   const [batch, setBatch] = useState();
@@ -102,7 +103,7 @@ function RegisterStudent() {
   const [contact, setContact] = useState();
   const [address, setAddress] = useState();
   const [dob, setDob] = useState();
-  const [cnic, setCnic] = useState();
+  const [uidai, setuidai] = useState();
   const [password, setPassword] = useState();
 
   const [loading, setLoading] = useState(false);
@@ -127,12 +128,12 @@ function RegisterStudent() {
             />
             <Input
               field={{
-                name: "cms",
-                placeholder: "Student CMS",
+                name: "urn",
+                placeholder: "Student urn",
                 type: "number",
                 req: true,
-                value: cms,
-                onChange: (e) => setCms(e.target.value),
+                value: urn,
+                onChange: (e) => seturn(e.target.value),
               }}
             />
             <Input
@@ -147,12 +148,12 @@ function RegisterStudent() {
             />
             <Input
               field={{
-                name: "cnic",
-                placeholder: "Student CNIC",
+                name: "uidai",
+                placeholder: "Student uidai",
                 type: "text",
                 req: true,
-                value: cnic,
-                onChange: (e) => setCnic(e.target.value),
+                value: uidai,
+                onChange: (e) => setuidai(e.target.value),
               }}
             />
           </div>
