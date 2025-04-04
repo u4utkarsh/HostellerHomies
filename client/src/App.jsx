@@ -26,6 +26,7 @@ import AdminSuggestions from './components/Dashboards/AdminDashboard/Suggestions
 import AdminSettings from './components/Dashboards/AdminDashboard/Settings'
 import AllStudents from "./components/Dashboards/AdminDashboard/AllStudents";
 import AdminMess from "./components/Dashboards/AdminDashboard/MessOff";
+import RulesAndGuidelines from "./components/LandingSite/rulesAndGuidelines/RulesAndGuidelines";
 
 function App() {
   return (
@@ -35,6 +36,7 @@ function App() {
           <Route index element={<LandingPage />} />
           <Route path="about" element={<About />} />
           <Route path="contact" element={<Contact />} />
+          <Route path="rules" element={<RulesAndGuidelines />} />
           <Route path="auth" element={<Auth />}>
             <Route index element={<SignIn />} />
             <Route path="login" element={<SignIn />} />

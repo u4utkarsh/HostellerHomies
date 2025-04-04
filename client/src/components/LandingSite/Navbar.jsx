@@ -49,6 +49,12 @@ function Navbar() {
           Request
         </Link>
         <Link
+          to="/rules"
+          className="md:py-3 md:hover:text-blue-500 transition-all ease-linear"
+        >
+          Rules & Guidelines
+        </Link>
+        <Link
           to="/auth/admin-login"
           className="md:py-3 md:hover:text-blue-500 transition-all ease-linear"
         >
