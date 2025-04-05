@@ -52,7 +52,7 @@ const List = () => {
   }, [invoiceList.length]);
 
   return (
-    <div className="w-full max-w-md p-4 rounded-lg shadow sm:p-8 bg-neutral-950 drop-shadow-xl overflow-y-auto max-h-70">
+    <div className="w-full max-w-md p-4 rounded-lg shadow sm:p-8 bg-neutral-950 drop-shadow-xl overflow-y-auto max-h-70 pl-32">
       <div className="flex items-center justify-between mb-4">
         <h5 className="text-xl font-bold leading-none text-white">
           Unpaid Invoices

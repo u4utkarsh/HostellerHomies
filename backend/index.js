@@ -21,6 +21,8 @@ app.use('/api/request', require('./routes/requestRoutes'));
 app.use('/api/attendance', require('./routes/attendanceRoutes'));
 app.use('/api/suggestion', require('./routes/suggestionRoutes'));
 app.use("/api/Event",require('./routes/EventFundRoutes.js'));
+app.use("/api/guard",require('./routes/securityGuards.js'));
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`)
 })

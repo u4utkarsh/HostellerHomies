@@ -128,7 +128,8 @@ function Complaints() {
 
 
   return (
-    <div className="w-full h-screen flex flex-col gap-10 items-center justify-center md:p-0 px-10 max-h-screen overflow-y-auto pt-80 md:pt-80 lg:p-0">
+    // <div className="w-full h-screen flex flex-col gap-10 items-center justify-center md:p-0 px-10 max-h-screen overflow-y-auto pt-80 md:pt-80 lg:p-0 pl-44">
+    <div className="ml-60 p-10 h-screen overflow-y-auto flex flex-col items-center justify-start gap-10">
       <h1 className="text-white font-bold text-5xl mt-10">Complaints</h1>
       <div className="flex gap-5 flex-wrap items-center justify-center">
         <form

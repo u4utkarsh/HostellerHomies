@@ -31,6 +31,8 @@ import RulesAndGuidelines from "./components/LandingSite/rulesAndGuidelines/Rule
 import NoticeBoard from "./components/LandingSite/NoticeBoard/NoticeBoard";
 import Event from "./components/Dashboards/StudentDashboard/Event";
 import EventRequestVerification from "./components/Dashboards/AdminDashboard/EventRequestVerification";
+import SecurityGuardDetails from "./components/Dashboards/StudentDashboard/SecurityGuardDetails";
+import SecurityGuardSelector from "./components/Dashboards/AdminDashboard/SecurityGuardSelector";
 
 
 function App() {
@@ -59,6 +61,7 @@ function App() {
           <Route path="invoices" element={<Invoices/>} />
           <Route path="settings" element={<Settings/>} />
           <Route path="event" element={<Event />} />
+          <Route path="security-guard-detail" element={<SecurityGuardDetails />} />
         </Route>
         <Route path="/admin-dashboard" element={<AdminIndex />}>
           <Route index element={<AdminHome />} />
@@ -71,6 +74,7 @@ function App() {
           <Route path="all-students" element={<AllStudents/>}/>
           <Route path="mess" element={<AdminMess />} />
           <Route path="event-request-verification" element={<EventRequestVerification />} />
+          <Route path="security-guard-selector" element={<SecurityGuardSelector />} />
 
         </Route>
       </Routes>
