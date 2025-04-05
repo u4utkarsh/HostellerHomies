@@ -356,7 +356,7 @@ function RegisterStudent() {
   };
 
   return (
-    <div className="ml-64 max-h-screen pt-20 flex flex-col items-center justify-center">
+    <div className="ml-64 max-h-screen pt-20 flex flex-col items-center justify-center mt-12">
       <h1 className="text-white font-bold text-5xl mt-10 mb-5">
         Register Student
       </h1>
