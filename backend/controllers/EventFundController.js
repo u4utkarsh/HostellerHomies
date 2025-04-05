@@ -66,7 +66,9 @@ exports.getEventFund = async (req, res) => {
 };
 exports.updateEventFundStatus = async (req, res) => {
     try {
+        console.log("function is calling!")
         const { eventFundId, status } = req.body;
+        console.log(eventFundId,status);
         if (!eventFundId || !status) {
             return res.status(400).json({ message: "EventFund ID and status are required" });
         }

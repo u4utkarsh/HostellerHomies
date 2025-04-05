@@ -17,8 +17,6 @@ function Home() {
   const admin = JSON.parse(localStorage.getItem("admin"));
   const hostel = JSON.parse(localStorage.getItem("hostel"));
 
-  // const admin = JSON.parse(localStorage.getItem("admin")) || {};
-  // const hostel = JSON.parse(localStorage.getItem("hostel")) || {};
   const [noOfStudents, setNoOfStudents] = useState(0);
   const [complaints, setComplaints] = useState([]);
   const [suggestions, setSuggestions] = useState([]);
@@ -223,7 +221,7 @@ function Home() {
   );
 
   return (
-    <div className="w-full h-screen flex flex-col gap-3 items-center justify-center max-h-screen overflow-x-hidden overflow-y-auto pt-[400px] sm:pt-96 md:pt-96 lg:pt-80 xl:pt-20">
+    <div className="w-full h-screen flex flex-col gap-3 items-center justify-center max-h-screen overflow-x-hidden overflow-y-auto pt-[400px] sm:pt-96 md:pt-96 lg:pt-80 xl:pt-20 ml-24">
       <h1 className="text-white font-bold text-5xl text-center">
         Welcome <span className="text-blue-500">{admin.name || "admin"}!</span>
       </h1>

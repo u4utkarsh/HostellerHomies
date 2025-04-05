@@ -32,10 +32,11 @@ const EventStatus = ({ currentStatus }) => {
 
   const renderSteps = () => {
     const visibleSteps =
-      current === "pending"
-        ? ["Sent", "In Progress", "pending"]
-        : ["Sent", "In Progress", "Success"];
-
+    current === "pending"
+      ? ["Sent", "In Progress", "pending"]
+      : current === "success"
+      ? ["Sent", "In Progress", "success"]
+      : ["Sent", "In Progress", "failed"];
     return visibleSteps.map((step, index) => {
       const StepIcon = statusSteps.find((s) => s.name === step)?.icon;
       return (
