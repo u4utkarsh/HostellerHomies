@@ -221,11 +221,11 @@ function Home() {
   );
 
   return (
-    <div className="w-full h-screen flex flex-col gap-3 items-center justify-center max-h-screen overflow-x-hidden overflow-y-auto pt-[400px] sm:pt-96 md:pt-96 lg:pt-80 xl:pt-20 ml-24">
+    <div className="ml-48 h-screen flex flex-col gap-3 items-center justify-center max-h-screen overflow-x-hidden overflow-y-auto pt-[400px] sm:pt-96 md:pt-96 lg:pt-80 xl:pt-20">
       <h1 className="text-white font-bold text-5xl text-center">
-        Welcome <span className="text-blue-500">{admin.name || "admin"}!</span>
+        Welcome <span className="text-blue-500">{admin?.name || "admin"}!</span>
       </h1>
-      <h1 className="text-white text-xl">Manager, {hostel.name || "hostel"}</h1>
+      <h1 className="text-white text-xl">Manager, {hostel?.name || "hostel"}</h1>
       <div className="flex w-full gap-5 sm:px-20 pt-5 flex-wrap items-center justify-center">
         <ShortCard title="Total Students" number={noOfStudents} />
         <ShortCard title="Total Complaints" number={complaints.length} />
